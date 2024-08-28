@@ -1,0 +1,30 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"echo test",
+    "headlessRun": "npx cypress run",
+    "headedRun": "npx cypress run --headed",
+    "record": "npm cypress run --record --key your-key",
+    "cypressCloud": "npx cypress open",
+    "specFeature": "node -e \"process.platform === 'win32' ? (console.log('Running on Windows') || require('child_process').execSync('npx cypress run --spec cypress/e2e/features/%npm_config_feature%.feature', { stdio: 'inherit' })) : (console.log('Running on Unix-like OS') || require('child_process').execSync('npx cypress run --spec cypress/e2e/features/$npm_config_features.feature', { stdio: 'inherit' }))\"",
+    "recordSpecFeature": "node -e \"process.platform === 'win32' ? (console.log('Running on Windows') || require('child_process').execSync('npx cypress run --record --spec cypress/e2e/features/%npm_config_feature%.feature', { stdio: 'inherit' })) : (console.log('Running on Unix-like OS') || require('child_process').execSync('npx cypress run --spec cypress/e2e/features/$npm_config_features.feature', { stdio: 'inherit' }))\"",
+    "specTag": "node -e \"process.platform === 'win32' ? (console.log('Running on Windows') || require('child_process').execSync('npx cypress run --env TAGS=\"%npm_config_tag%\"', { stdio: 'inherit' })) : (console.log('Running on Unix-like OS') || require('child_process').execSync('npx cypress run --spec npx cypress run --env TAGS=\"$npm_config_tags\"', { stdio: 'inherit' }))\"",
+    "recordSpecTag": "node -e \"process.platform === 'win32' ? (console.log('Running on Windows') || require('child_process').execSync('npx cypress run --record --env TAGS=\"%npm_config_tag%\"', { stdio: 'inherit' })) : (console.log('Running on Unix-like OS') || require('child_process').execSync('npx cypress run --spec npx cypress run --env TAGS=\"$npm_config_tags\"', { stdio: 'inherit' }))\""
+    },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "chai": "^4.3.7",
+    "cypress": "^13.6.6",
+    "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@cypress/browserify-preprocessor": "latest",
+    "moment": "^2.30.1"
+  }
+}
