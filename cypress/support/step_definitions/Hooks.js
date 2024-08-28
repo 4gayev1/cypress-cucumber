@@ -1,8 +1,6 @@
 const { Before } = require("@badeball/cypress-cucumber-preprocessor");
-const initElements = require("../plugins/InitElements");
+const init = require("../plugins/init");
 
 Before(() => {
-  initElements(Cypress.spec.name);
+  init(Cypress.spec.name);
 });
-
-

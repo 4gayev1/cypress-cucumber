@@ -1,16 +1,18 @@
 import Elements from "./Elements";
 
-function initElements(runningFeature) {
+function init(runningFeature) {
   const featureName = runningFeature.split(".")[0].toLowerCase();
-  cy.task('readPomDirectory').then((files) => {
+  cy.task("readDirectory", "cypress/e2e/features/POM").then((files) => {
     files.forEach((file) => {
-      if (file.split(".")[0].toLowerCase() === featureName) {
+      const POMfileName = file.split(".")[0].toLowerCase()
+      if (POMfileName === featureName) {
         cy.readFile(`cypress/e2e/features/POM/${file}`).then((content) => {
           Elements.addElements(content);
         });
       }
     });
   });
+
 }
 
-export default initElements;
+export default init;

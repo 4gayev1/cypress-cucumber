@@ -6,7 +6,6 @@ export default class Elements {
   }
 
   static getElement(key) {
-    console.log(key)
     return this.elementsMap[key];
   }
 }

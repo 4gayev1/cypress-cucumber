@@ -1,18 +1,24 @@
 const { defineConfig } = require("cypress");
-const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
-const { preprocessor } = require("@badeball/cypress-cucumber-preprocessor/browserify");
-const fs = require('fs');
-const path = require('path');
+const {
+  addCucumberPreprocessorPlugin,
+} = require("@badeball/cypress-cucumber-preprocessor");
+const {
+  preprocessor,
+} = require("@badeball/cypress-cucumber-preprocessor/browserify");
+const fs = require("fs");
+const path = require("path");
 
 async function setupNodeEvents(on, config) {
   await addCucumberPreprocessorPlugin(on, config);
 
   on("file:preprocessor", preprocessor(config));
 
-  on('task', {
-    readPomDirectory() {
-      return fs.readdirSync(path.join(__dirname, 'cypress', 'e2e', 'features', 'POM'));
-    }
+  on("task", {
+    readDirectory(directoryPath) {
+      return fs.readdirSync(
+        path.join(__dirname,directoryPath),
+      );
+    },
   });
 
   return config;
