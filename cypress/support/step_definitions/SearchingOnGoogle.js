@@ -1,4 +1,4 @@
-import { Given,When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import Elements from "../plugins/Elements";
 
 Given("User is on {string} webpage", (url) => {
@@ -6,7 +6,7 @@ Given("User is on {string} webpage", (url) => {
 });
 
 When("Type {string} in {string}", (text, element) => {
-      text !== "" ? cy.get(Elements.getElement(element)).type(`${text}`) : " ";
+  text !== "" ? cy.get(Elements.getElement(element)).type(`${text}`) : " ";
 });
 
 Then("Click {string}", (element) => {

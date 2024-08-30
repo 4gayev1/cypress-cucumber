@@ -15,9 +15,7 @@ async function setupNodeEvents(on, config) {
 
   on("task", {
     readDirectory(directoryPath) {
-      return fs.readdirSync(
-        path.join(__dirname,directoryPath),
-      );
+      return fs.readdirSync(path.join(__dirname, directoryPath));
     },
   });
 

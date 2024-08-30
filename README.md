@@ -82,36 +82,43 @@ This projects provides several run options to suit different testing needs and C
 #### Available Scripts
 
 1. **Open Cypress Test Runner**
+
    ```
    npm run cypressCloud
    ```
 
 2. **Run Tests Headlessly**
+
    ```
    npm run headlessRun
    ```
 
 3. **Run Tests in Headed Mode**
+
    ```
    npm run headedRun
    ```
 
 4. **Record Run in Cypress Dashboard**
+
    ```
    npm run record
    ```
 
 5. **Run Specific Feature File**
+
    ```
    npm run specFeature --feature=your-feature-name
    ```
 
 6. **Record Run of Specific Feature File**
+
    ```
    npm run recordSpecFeature --feature=your-feature-name
    ```
 
 7. **Run Tests with Specific Tag**
+
    ```
    npm run specTag --tag=@your-tag
    ```
@@ -130,16 +137,19 @@ This projects provides several run options to suit different testing needs and C
 #### Examples
 
 Run a specific feature file:
+
 ```
 npm run specFeature --feature=login
 ```
 
 Run all tests tagged with @smoke:
+
 ```
 npm run specTag --tag=@smoke
 ```
 
 Record a run of all @regression tests:
+
 ```
 npm run recordSpecTag --tag=@regression
 ```
@@ -167,6 +177,7 @@ Ensure that your POM JSON files and feature files have matching names (case-inse
 ## Troubleshooting
 
 If you encounter issues with element selection, ensure that:
+
 - Your POM JSON file name matches the feature file name (case-insensitive).
 - The element keys in your POM JSON file match those used in your step definitions.
 - Your selectors in the POM JSON file are correct and unique.
