@@ -2,6 +2,6 @@ screenshots
 node_modules
 cypress/videos
 cypress/screenshots
-package-lock.json
 .DS_Store
 .idea
+package-lock.json
