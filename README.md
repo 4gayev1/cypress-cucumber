@@ -27,11 +27,12 @@ Example `login.json`:
 
 ```json
 {
-  "usernameInput": "#username",
-  "passwordInput": "#password",
-  "loginButton": "#login-btn"
+  "usernameInput":{"value": "#username", "waitTime":3},
+  "passwordInput": {"value": "#password"},
+  "loginButton": {"value":"#login-btn"}
 }
 ```
+**waitTime is optional, default wait is 0.
 
 ### 2. Write Feature Files
 
@@ -49,13 +50,43 @@ Scenario: Successful login
   Then I should be logged in successfully
 ```
 
+Also you can use built in step definitions which is more than 50 and you can get familiar with them using the list which is below: <br/>
+
+User is on {string} page
+User goes {string} page
+User reload the page
+User hard reload the page
+User waits {int} seconds
+User types {string} in {string}
+User {string} {string}
+User selects {string} from {string}
+User scrolls {string} to {string}
+User scrolls {string} to {string} in {int} seconds
+User scrolls page to {string}
+User scrolls page to {string} in {int} seconds
+User scrolls {string} from {string} to {string}
+User scrolls page from {string} to {string}
+User scrolls {string} into view
+User scrolls {string} into view in {int} seconds
+{string} should be {string}
+{string} should have {string} {string}
+{string} of {string} {string} should have {string}
+{string} should not have {string} {string}
+{string} of {string} {string} should not have {string}
+
+
 ### 3. Implement Step Definitions
 
 Create step definition files in the `cypress/e2e/step_definitions` directory. Import the necessary dependencies as shown below:
 
 ```javascript
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import Elements from "../plugins/Elements";
+const {Given,
+  When,
+  Then
+} = require("@badeball/cypress-cucumber-preprocessor");
+const {
+  getElement
+} = require("../plugins/Elements");
 
 Given("I am on the login page", () => {
   cy.visit("/login");
