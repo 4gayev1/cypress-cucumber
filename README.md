@@ -23,7 +23,7 @@ git clone https://github.com/4gayev1/cypress-cucumber.git
 
 Create JSON files for your Page Object Models in the `cypress/e2e/features/POM` directory. The filename should match your feature file name (case-insensitive).
 
-Example `login.json`:
+Example `login.pom.json`:
 
 ```json
 {
@@ -52,27 +52,27 @@ Scenario: Successful login
 
 Also you can use built in step definitions which is more than 50 and you can get familiar with them using the list which is below: <br/>
 
-User is on {string} page
-User goes {string} page
-User reload the page
-User hard reload the page
-User waits {int} seconds
-User types {string} in {string}
-User {string} {string}
-User selects {string} from {string}
-User scrolls {string} to {string}
-User scrolls {string} to {string} in {int} seconds
-User scrolls page to {string}
-User scrolls page to {string} in {int} seconds
-User scrolls {string} from {string} to {string}
-User scrolls page from {string} to {string}
-User scrolls {string} into view
-User scrolls {string} into view in {int} seconds
-{string} should be {string}
-{string} should have {string} {string}
-{string} of {string} {string} should have {string}
-{string} should not have {string} {string}
-{string} of {string} {string} should not have {string}
+User is on {string} page<br/>
+User goes {string} page<br/>
+User reload the page<br/>
+User hard reload the page<br/>
+User waits {int} seconds<br/>
+User types {string} in {string}<br/>
+User {string} {string}<br/>
+User selects {string} from {string}<br/>
+User scrolls {string} to {string}<br/>
+User scrolls {string} to {string} in {int} seconds<br/>
+User scrolls page to {string}<br/>
+User scrolls page to {string} in {int} seconds<br/>
+User scrolls {string} from {string} to {string}<br/>
+User scrolls page from {string} to {string}<br/>
+User scrolls {string} into view<br/>
+User scrolls {string} into view in {int} seconds<br/>
+{string} should be {string}<br/>
+{string} should have {string} {string}<br/>
+{string} of {string} {string} should have {string}<br/>
+{string} should not have {string} {string}<br/>
+{string} of {string} {string} should not have {string}<br/>
 
 
 ### 3. Implement Step Definitions
