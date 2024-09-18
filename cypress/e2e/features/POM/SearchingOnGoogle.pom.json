@@ -1,5 +1,5 @@
 {
-  "googleSearchInput": "#APjFqb",
-  "googleSearchButton": "body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.gNO89b",
-  "googleText": "#rso > div:nth-child(1) > div > div > div > div.kb0PBd.cvP2Ce.ieodic.jGGQ5e > div > div > span > a > h3"
+  "googleSearchInput":{"selector": "#APjFqb","waitTime":3},
+  "googleSearchButton": {"selector":"body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.FPdoLc.lJ9FBc > center > input.gNO89b"},
+  "googleText": {"selector":"#rso > div:nth-child(1) > div > div > div > div.kb0PBd.cvP2Ce.ieodic.jGGQ5e > div > div > span > a > h3"}
 }

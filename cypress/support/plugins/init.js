@@ -1,4 +1,4 @@
-import Elements from "./Elements";
+const {addElements} = require("./Elements");
 
 function init(runningFeature) {
   const featureName = runningFeature.split(".")[0].toLowerCase();
@@ -7,7 +7,7 @@ function init(runningFeature) {
       const POMfileName = file.split(".")[0].toLowerCase();
       if (POMfileName === featureName) {
         cy.readFile(`cypress/e2e/features/POM/${file}`).then((content) => {
-          Elements.addElements(content);
+          addElements(content);
         });
       }
     });
